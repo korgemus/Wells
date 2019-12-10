@@ -16,7 +16,9 @@ namespace WindowsFormsApp4
         public int happines = 0;
         public int purity = 0;
         public int health = 0;
+        public int experience = 0;
         private int counter;
+        int x = 10;
 
         private void InitializeTimer()
         {
@@ -49,6 +51,8 @@ namespace WindowsFormsApp4
                 progressBar2.Minimum = 0;
                 progressBar2.Step = 1;
                 progressBar2.Value += 20;
+                experience += 5;
+                progressBar5.Value += 5;
             }
             else
             {
@@ -84,14 +88,9 @@ namespace WindowsFormsApp4
             else
             {
                 counter += 1;
-                label2.Text = "yes" + counter.ToString();
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -107,6 +106,8 @@ namespace WindowsFormsApp4
                 progressBar3.Minimum = 0;
                 progressBar3.Step = 1;
                 progressBar3.Value += 20;
+                experience += 5;
+                progressBar5.Value += 5;
             }
             else
             {
@@ -123,6 +124,8 @@ namespace WindowsFormsApp4
                 progressBar4.Minimum = 0;
                 progressBar4.Step = 1;
                 progressBar4.Value += 20;
+                experience += 5;
+                progressBar5.Value += 5;
             }
             else
             {
@@ -132,18 +135,24 @@ namespace WindowsFormsApp4
 
         private void button7_Click(object sender, EventArgs e)//выгулять
         {
-            if (progressBar2.Value > 0)
+            if (progressBar2.Value > 0) 
             {
+                food -= 20;
                 progressBar2.Value -= 20;
+                
+
             }
             else
             {
                 progressBar2.Value = 0;
             }
+
             if (progressBar4.Value < 80)
             {
                 happines += 40;
                 progressBar4.Value += 40;
+                experience += 5;
+                progressBar5.Value += 5;
             }
             else
             {
@@ -160,10 +169,33 @@ namespace WindowsFormsApp4
                 progressBar1.Minimum = 0;
                 progressBar1.Step = 1;
                 progressBar1.Value += 20;
+                experience += 5;
+                progressBar5.Value += 5;
             }
             else
             {
                 progressBar1.Value = 100;
+            }
+        }
+
+        private void progressBar5_Click(object sender, EventArgs e)//опыт
+        {
+            if (progressBar5.Value < x)
+            {
+                progressBar5.Maximum = x;
+                progressBar5.Minimum = 0;
+                progressBar5.Step = 1;
+                progressBar5.Value += 5;
+            }
+            else
+            {
+                progressBar5.Value = x;
+            }
+            if (progressBar5.Value >= x)
+            {
+                x = x * 2;
+                progressBar5.Maximum = x;
+                progressBar5.Value = 0;
             }
         }
     }
