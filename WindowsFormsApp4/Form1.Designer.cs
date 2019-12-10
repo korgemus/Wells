@@ -44,7 +44,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -103,6 +102,7 @@
             this.progressBar5.Name = "progressBar5";
             this.progressBar5.Size = new System.Drawing.Size(110, 17);
             this.progressBar5.TabIndex = 12;
+            this.progressBar5.Click += new System.EventHandler(this.progressBar5_Click);
             // 
             // textBox2
             // 
@@ -180,16 +180,6 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "label1";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 425);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
             // button8
             // 
             this.button8.Image = global::WindowsFormsApp4.Properties.Resources.images__2_;
@@ -264,7 +254,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -326,7 +315,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
 
