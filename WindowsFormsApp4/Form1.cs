@@ -19,6 +19,12 @@ namespace WindowsFormsApp4
         public int experience = 0;
         private int counter;
         int x = 10;
+        int level = 1;
+        void ExperienceChanged()
+        {
+            label1.Text = "Уровень:" + Convert.ToString(level);
+            label2.Text = "Опыт:" + Convert.ToString(experience) + "/" + Convert.ToString(progressBar5.Maximum);
+        }
 
         private void InitializeTimer()
         {
@@ -37,10 +43,7 @@ namespace WindowsFormsApp4
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void button4_Click(object sender, EventArgs e)//еда
         {
@@ -53,6 +56,8 @@ namespace WindowsFormsApp4
                 progressBar2.Value += 20;
                 experience += 5;
                 progressBar5.Value += 5;
+                ExperienceChanged();
+
             }
             else
             {
@@ -94,7 +99,7 @@ namespace WindowsFormsApp4
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            ExperienceChanged();
         }
 
         private void button5_Click(object sender, EventArgs e)//помыть
@@ -108,6 +113,7 @@ namespace WindowsFormsApp4
                 progressBar3.Value += 20;
                 experience += 5;
                 progressBar5.Value += 5;
+                ExperienceChanged();
             }
             else
             {
@@ -126,6 +132,8 @@ namespace WindowsFormsApp4
                 progressBar4.Value += 20;
                 experience += 5;
                 progressBar5.Value += 5;
+                ExperienceChanged();
+
             }
             else
             {
@@ -153,6 +161,8 @@ namespace WindowsFormsApp4
                 progressBar4.Value += 40;
                 experience += 5;
                 progressBar5.Value += 5;
+                ExperienceChanged();
+
             }
             else
             {
@@ -171,6 +181,8 @@ namespace WindowsFormsApp4
                 progressBar1.Value += 20;
                 experience += 5;
                 progressBar5.Value += 5;
+                ExperienceChanged();
+
             }
             else
             {
@@ -178,13 +190,18 @@ namespace WindowsFormsApp4
             }
         }
 
+
+
+
         private void progressBar5_Click(object sender, EventArgs e)//опыт
         {
+
+            progressBar5.Maximum = x;
+            progressBar5.Minimum = 0;
+            progressBar5.Step = 1;
+
             if (progressBar5.Value < x)
             {
-                progressBar5.Maximum = x;
-                progressBar5.Minimum = 0;
-                progressBar5.Step = 1;
                 progressBar5.Value += 5;
             }
             else
@@ -196,7 +213,19 @@ namespace WindowsFormsApp4
                 x = x * 2;
                 progressBar5.Maximum = x;
                 progressBar5.Value = 0;
+                level += 1;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)//уровень
+        {
+
+            
+        }
+
+        private void label2_Click(object sender, EventArgs e)//опыт
+        {
+
         }
     }
 }
