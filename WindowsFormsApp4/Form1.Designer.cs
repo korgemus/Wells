@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.progressBar3 = new System.Windows.Forms.ProgressBar();
@@ -40,10 +41,11 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -51,7 +53,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -81,6 +84,7 @@
             this.progressBar3.Name = "progressBar3";
             this.progressBar3.Size = new System.Drawing.Size(115, 16);
             this.progressBar3.TabIndex = 8;
+            this.progressBar3.Click += new System.EventHandler(this.progressBar3_Click);
             // 
             // progressBar4
             // 
@@ -130,6 +134,7 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -149,15 +154,6 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(743, 216);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(45, 44);
-            this.button7.TabIndex = 20;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
@@ -173,15 +169,35 @@
             this.label1.Text = "label1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(140, 53);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // button8
             // 
-            this.button8.Image = global::WindowsFormsApp4.Properties.Resources.images__2_;
+            this.button8.Image = global::WindowsFormsApp4.Properties.Resources._5_2;
             this.button8.Location = new System.Drawing.Point(743, 266);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(45, 44);
             this.button8.TabIndex = 21;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button7
+            // 
+            this.button7.Image = global::WindowsFormsApp4.Properties.Resources._4_3;
+            this.button7.Location = new System.Drawing.Point(743, 216);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(45, 44);
+            this.button7.TabIndex = 20;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button4
             // 
@@ -203,6 +219,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackgroundImage = global::WindowsFormsApp4.Properties.Resources._1;
             this.pictureBox5.Location = new System.Drawing.Point(12, 266);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(42, 40);
@@ -211,6 +228,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Image = global::WindowsFormsApp4.Properties.Resources._2;
             this.pictureBox4.Location = new System.Drawing.Point(12, 220);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(42, 40);
@@ -228,11 +246,15 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.Безымянный;
+            this.pictureBox2.Image = global::WindowsFormsApp4.Properties.Resources.Безымянный2;
             this.pictureBox2.Location = new System.Drawing.Point(12, 128);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -242,15 +264,15 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // backgroundWorker1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(140, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "My pet";
+            this.notifyIcon1.Visible = true;
             // 
             // Form1
             // 
@@ -318,6 +340,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
     }
 }
 

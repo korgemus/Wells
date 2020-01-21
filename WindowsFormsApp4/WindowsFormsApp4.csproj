@@ -107,5 +107,53 @@
   <ItemGroup>
     <None Include="Resources\depositphotos_127494694-stock-illustration-ham-icon-in-cartoon-style %281%29.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безымянный.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безымянный1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безымянный2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безымянный3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безымянный4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без названия.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без названия1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4,1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4,2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4,3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5,1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5,2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
