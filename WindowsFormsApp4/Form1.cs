@@ -47,18 +47,27 @@ namespace WindowsFormsApp4
 
         private void button4_Click(object sender, EventArgs e)//еда
         {
-            if (progressBar2.Value < 100)
+            if (progressBar2.Value < 100) 
             {
                 food += 20;
                 progressBar2.Maximum = 100;
                 progressBar2.Minimum = 0;
                 progressBar2.Step = 1;
                 progressBar2.Value += 20;
-
-                if (experience <= x - 5)
+                experience += 5;
+                progressBar5.Value += 5;
+                if (experience == x - 5) 
                 {
                     experience += 5;
                     progressBar5.Value += 5;
+                }
+                if (experience == x)
+                { 
+                        x = x * 2;
+                        level += 1;
+                        progressBar5.Maximum = x;
+                        experience = 0;
+                        progressBar5.Value = experience;
                 }
                 ExperienceChanged();
 
@@ -103,7 +112,7 @@ namespace WindowsFormsApp4
 
         private void button5_Click(object sender, EventArgs e)//помыть
         {
-            if (progressBar3.Value < 100)
+            if (progressBar3.Value < 100) 
             {
                 purity += 20;
                 progressBar3.Maximum = 100;
@@ -111,10 +120,19 @@ namespace WindowsFormsApp4
                 progressBar3.Step = 1;
                 progressBar3.Value += 20;
 
-                if (experience <= x - 5)
+
+                if (experience <= x - 5) 
                 {
                     experience += 5;
                     progressBar5.Value += 5;
+                }
+                if (experience == x)
+                {
+                    x = x * 2;
+                    level += 1;
+                    progressBar5.Maximum = x;
+                    experience = 0;
+                    progressBar5.Value = experience;
                 }
                 ExperienceChanged();
             }
@@ -126,7 +144,7 @@ namespace WindowsFormsApp4
 
         private void button6_Click(object sender, EventArgs e)//погладить
         {
-            if (progressBar4.Value < 100)
+            if (progressBar4.Value < 100) 
             {
                 happines += 20;
                 progressBar4.Maximum = 100;
@@ -134,10 +152,18 @@ namespace WindowsFormsApp4
                 progressBar4.Step = 1;
                 progressBar4.Value += 20;
 
-                if (experience <= x - 5)
+                if (experience <= x - 5) 
                 {
                     experience += 5;
                     progressBar5.Value += 5;
+                }
+                if (experience == x)
+                {
+                    x = x * 2;
+                    level += 1;
+                    progressBar5.Maximum = x;
+                    experience = 0;
+                    progressBar5.Value = experience;
                 }
                 ExperienceChanged();
 
@@ -150,12 +176,10 @@ namespace WindowsFormsApp4
 
         private void button7_Click(object sender, EventArgs e)//выгулять
         {
-            if (progressBar2.Value > 0)
+            if (progressBar2.Value > 0) 
             {
                 food -= 20;
                 progressBar2.Value -= 20;
-
-
             }
             else
             {
@@ -167,12 +191,19 @@ namespace WindowsFormsApp4
                 happines += 40;
                 progressBar4.Value += 40;
 
-                if (experience <= x - 5)
+                if (experience <= x - 5) 
                 {
                     experience += 5;
                     progressBar5.Value += 5;
                 }
-                progressBar5.Value += 5;
+                if (experience == x)
+                {
+                    x = x * 2;
+                    level += 1;
+                    progressBar5.Maximum = x;
+                    experience = 0;
+                    progressBar5.Value = experience;
+                }
                 ExperienceChanged();
 
             }
@@ -184,7 +215,7 @@ namespace WindowsFormsApp4
 
         private void button8_Click(object sender, EventArgs e)//таблетки
         {
-            if (progressBar1.Value < 100)//здоровье
+            if (progressBar1.Value < 100) //здоровье
             {
                 health += 20;
                 progressBar1.Maximum = 100;
@@ -196,6 +227,14 @@ namespace WindowsFormsApp4
                 {
                     experience += 5;
                     progressBar5.Value += 5;
+                }
+                if (experience == x)
+                {
+                    x = x * 2;
+                    level += 1;
+                    progressBar5.Maximum = x;
+                    experience = 0;
+                    progressBar5.Value = experience;
                 }
                 ExperienceChanged();
 
@@ -216,15 +255,20 @@ namespace WindowsFormsApp4
             progressBar5.Minimum = 0;
             progressBar5.Step = 1;
 
-            if (experience < x)
+           /* if (experience < x-5)
             {
                 progressBar5.Value += 5;
+                
             }
-            else
+            if (experience == x - 5)
+            {
+                progressBar5.Value += 5;
+                caneat = false;
+            }
             {
                 experience = x;
                 progressBar5.Value = x;
-            }
+            }*/
             if (experience == x)
             {
                 x = x * 2;
