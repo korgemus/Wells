@@ -17,7 +17,7 @@ namespace WindowsFormsApp4
         public int purity = 0;
         public int health = 0;
         public int experience = 0;
-        private int counter;
+        public int counter = 0;
         int x = 100;
         int level = 1;
         void ExperienceChanged()
@@ -26,15 +26,7 @@ namespace WindowsFormsApp4
             label2.Text = "Опыт:" + Convert.ToString(experience) + "/" + Convert.ToString(progressBar5.Maximum);
         }
 
-        private void InitializeTimer()
-        {
-            // Run this procedure in an appropriate event.  
-            counter = 0;
-            timer1.Interval = 1000;
-            timer1.Enabled = true;
-            // Hook up timer's tick event handler.  
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-        }
+
 
 
 
@@ -86,22 +78,13 @@ namespace WindowsFormsApp4
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int counter = 0;
+            counter++;
+            if (progressBar2.Value != 0)
+            {
+                progressBar2.Value -= 1;
+            }
 
-            /* timer1.Interval = 1000;
-             timer1.Tick += new EventHandler(timer1_Tick);
-             timer1.Enabled = true;
-             progressBar2.Value -= 20;
-             */
-            if (counter >= 10)
-            {
-                timer1.Enabled = false;
-                counter = 0;
-            }
-            else
-            {
-                counter += 1;
-            }
+            label3.Text = counter.ToString();
         }
 
 
