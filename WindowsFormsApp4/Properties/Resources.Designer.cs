@@ -243,6 +243,26 @@ namespace WindowsFormsApp4.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_soap_font_soap_5ac6787e7ade58_1977088115229564145033 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-soap-font-soap-5ac6787e7ade58.1977088115229564145033", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kisspng_computer_icons_soap_font_soap_5ac6787e7ade581 {
+            get {
+                object obj = ResourceManager.GetObject("kisspng-computer-icons-soap-font-soap-5ac6787e7ade581", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Без_названия {
             get {
                 object obj = ResourceManager.GetObject("Без названия", resourceCulture);

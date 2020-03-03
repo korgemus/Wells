@@ -155,5 +155,11 @@
   <ItemGroup>
     <None Include="Resources\5,2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-soap-font-soap-5ac6787e7ade58.1977088115229564145033.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-computer-icons-soap-font-soap-5ac6787e7ade58.19770881152295641450331.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

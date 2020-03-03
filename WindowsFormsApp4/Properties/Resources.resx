@@ -130,6 +130,9 @@
   <data name="4,3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4,3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="kisspng-computer-icons-soap-font-soap-5ac6787e7ade58.1977088115229564145033" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-soap-font-soap-5ac6787e7ade58.1977088115229564145033.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="depositphotos_127494694-stock-illustration-ham-icon-in-cartoon-style2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_127494694-stock-illustration-ham-icon-in-cartoon-style2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,11 +178,14 @@
   <data name="depositphotos_127494694-stock-illustration-ham-icon-in-cartoon-style3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_127494694-stock-illustration-ham-icon-in-cartoon-style3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Безымянный4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Безымянный4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="5,2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5,2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="depositphotos_127494694-stock-illustration-ham-icon-in-cartoon-style (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\depositphotos_127494694-stock-illustration-ham-icon-in-cartoon-style (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,7 +196,7 @@
   <data name="21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="5,2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\5,2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kisspng-computer-icons-soap-font-soap-5ac6787e7ade581" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kisspng-computer-icons-soap-font-soap-5ac6787e7ade58.19770881152295641450331.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

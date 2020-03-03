@@ -45,7 +45,39 @@ namespace WindowsFormsApp4
                 progressBar2.Maximum = 100;
                 progressBar2.Minimum = 0;
                 progressBar2.Step = 1;
-                progressBar2.Value += 20;
+
+                if (progressBar2.Value >= progressBar2.Maximum - 20)
+                {
+                    progressBar2.Value = progressBar2.Maximum;
+                    if (progressBar3.Value >= 20)
+                    {
+                        purity -= 20;//пачкается
+                        progressBar3.Value -= 20;
+                    }
+                    
+                    
+                }
+                else
+                {
+                    progressBar2.Value += 20;//здесь доделать пачканье
+                    if (progressBar3.Value >= 20)
+                    {
+                        purity -= 20;//пачкается
+                        progressBar3.Value -= 20;
+                    }
+
+                }
+
+                if (progressBar3.Value >= 20)
+                {
+                    purity -= 20;
+                    progressBar3.Value -= 20;
+                }
+                else
+                {
+                    progressBar3.Value = 0;
+                }
+
                 experience += 5;
                 progressBar5.Value += 5;
                 if (experience == x - 5) 
@@ -104,6 +136,7 @@ namespace WindowsFormsApp4
                 progressBar3.Value += 20;
 
 
+
                 if (experience <= x - 5) 
                 {
                     experience += 5;
@@ -159,7 +192,7 @@ namespace WindowsFormsApp4
 
         private void button7_Click(object sender, EventArgs e)//выгулять
         {
-            if (progressBar2.Value > 0) 
+            if (progressBar2.Value >= 20) 
             {
                 food -= 20;
                 progressBar2.Value -= 20;
@@ -171,8 +204,8 @@ namespace WindowsFormsApp4
 
             if (progressBar4.Value < 80)
             {
-                happines += 40;
-                progressBar4.Value += 40;
+                happines += 20;
+                progressBar4.Value += 20;
 
                 if (experience <= x - 5) 
                 {
