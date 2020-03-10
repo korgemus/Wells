@@ -312,7 +312,10 @@ namespace WindowsFormsApp4
 
         }
 
-
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            pictureBox7.Image = imageList1.Images[1];
+        }
 
 
 
@@ -348,5 +351,7 @@ namespace WindowsFormsApp4
         {
           
         }
+
+
     }
 }
