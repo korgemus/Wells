@@ -17,7 +17,7 @@ namespace WindowsFormsApp4
         public int purity = 0;
         public int health = 0;
         public int experience = 0;
-        private int counter;
+        public int counter = 0;
         int x = 100;
         int level = 1;
         void ExperienceChanged()
@@ -26,15 +26,7 @@ namespace WindowsFormsApp4
             label2.Text = "Опыт:" + Convert.ToString(experience) + "/" + Convert.ToString(progressBar5.Maximum);
         }
 
-        private void InitializeTimer()
-        {
-            // Run this procedure in an appropriate event.  
-            counter = 0;
-            timer1.Interval = 1000;
-            timer1.Enabled = true;
-            // Hook up timer's tick event handler.  
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-        }
+
 
 
 
@@ -53,7 +45,39 @@ namespace WindowsFormsApp4
                 progressBar2.Maximum = 100;
                 progressBar2.Minimum = 0;
                 progressBar2.Step = 1;
-                progressBar2.Value += 20;
+
+                if (progressBar2.Value >= progressBar2.Maximum - 20)
+                {
+                    progressBar2.Value = progressBar2.Maximum;
+                    if (progressBar3.Value >= 20)
+                    {
+                        purity -= 20;//пачкается
+                        progressBar3.Value -= 20;
+                    }
+                    
+                    
+                }
+                else
+                {
+                    progressBar2.Value += 20;//здесь доделать пачканье
+                    if (progressBar3.Value >= 20)
+                    {
+                        purity -= 20;//пачкается
+                        progressBar3.Value -= 20;
+                    }
+
+                }
+
+                if (progressBar3.Value >= 20)
+                {
+                    purity -= 20;
+                    progressBar3.Value -= 20;
+                }
+                else
+                {
+                    progressBar3.Value = 0;
+                }
+
                 experience += 5;
                 progressBar5.Value += 5;
                 if (experience == x - 5) 
@@ -86,22 +110,13 @@ namespace WindowsFormsApp4
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int counter = 0;
+            counter++;
+            if (progressBar2.Value != 0)
+            {
+                progressBar2.Value -= 1;
+            }
 
-            /* timer1.Interval = 1000;
-             timer1.Tick += new EventHandler(timer1_Tick);
-             timer1.Enabled = true;
-             progressBar2.Value -= 20;
-             */
-            if (counter >= 10)
-            {
-                timer1.Enabled = false;
-                counter = 0;
-            }
-            else
-            {
-                counter += 1;
-            }
+            label3.Text = counter.ToString();
         }
 
 
@@ -119,6 +134,7 @@ namespace WindowsFormsApp4
                 progressBar3.Minimum = 0;
                 progressBar3.Step = 1;
                 progressBar3.Value += 20;
+
 
 
                 if (experience <= x - 5) 
@@ -176,7 +192,7 @@ namespace WindowsFormsApp4
 
         private void button7_Click(object sender, EventArgs e)//выгулять
         {
-            if (progressBar2.Value > 0) 
+            if (progressBar2.Value >= 20) 
             {
                 food -= 20;
                 progressBar2.Value -= 20;
@@ -188,8 +204,8 @@ namespace WindowsFormsApp4
 
             if (progressBar4.Value < 80)
             {
-                happines += 40;
-                progressBar4.Value += 40;
+                happines += 20;
+                progressBar4.Value += 20;
 
                 if (experience <= x - 5) 
                 {
@@ -296,7 +312,10 @@ namespace WindowsFormsApp4
 
         }
 
-
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            pictureBox7.Image = imageList1.Images[1];
+        }
 
 
 
@@ -332,5 +351,7 @@ namespace WindowsFormsApp4
         {
           
         }
+
+
     }
 }
